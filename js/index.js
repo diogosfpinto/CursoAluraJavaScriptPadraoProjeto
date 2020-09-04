@@ -6,8 +6,6 @@ var campos = [
 
 var tbody = document.querySelector('table tbody');
 
-var somaVolumes = 0;
-
 document.querySelector('.form').addEventListener('submit', function(event){
     
     //Removendo o padrão de atualizar a página ao submeter um form.
@@ -25,29 +23,9 @@ document.querySelector('.form').addEventListener('submit', function(event){
     
     tdVolume.textContent = campos[1].value * campos[2].value;
 
-    tdVolume.classList.add('volume');
     tr.appendChild(tdVolume);
 
     tbody.appendChild(tr);
-
-
-    var trSomaVolume = document.createElement("tr");
-    var tdSomaVolume = document.createElement("td");
-
-    var volumes = document.querySelectorAll('.volume');
-
-    volumes.forEach(function(volume){
-        
-        inteiro = parseInt(volume.textContent);
-        console.log(volume.textContent);
-        (somaVolumes += inteiro);
-        
-        tdSomaVolume.textContent = somaVolumes;
-        
-    });
-
-    trSomaVolume.appendChild(tdSomaVolume);
-    tbody.appendChild(tdSomaVolume);
     
 
     campos[0].value = '';
