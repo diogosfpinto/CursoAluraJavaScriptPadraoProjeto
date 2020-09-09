@@ -39,12 +39,14 @@ document.querySelector('.form').addEventListener('submit', function(event){
     volumes.forEach(function(volume){
         
         inteiro = parseInt(volume.textContent);
-        console.log(volume.textContent);
-        (somaVolumes += inteiro);
+        console.log(inteiro);
+        somaVolumes += inteiro;
         
         tdSomaVolume.textContent = somaVolumes;
         
     });
+
+    somaVolumes = 0;
 
     trSomaVolume.appendChild(tdSomaVolume);
     tbody.appendChild(tdSomaVolume);
