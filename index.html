@@ -62,11 +62,10 @@
     <script>
 
         // Instanciando objetos da classe Negociação
-        var n1 = new Negociacao();
+        var n1 = new Negociacao(new Date(), 10, 700);
+        var volume = n1.obtemVolume();
+        console.log(volume);
         console.log(n1);
-
-        var n2 = new Negociacao();
-        console.log(n2);
     </script>
 </body>
 </html>
