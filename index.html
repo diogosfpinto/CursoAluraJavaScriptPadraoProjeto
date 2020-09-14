@@ -64,8 +64,12 @@
         // Instanciando objetos da classe Negociação
         var n1 = new Negociacao(new Date(), 10, 700);
         var volume = n1.getVolume();
+        
+        //Errado! não se pode acessar um atributo de objeto que contenha o underline na frente pois fere 
+        // o princípio de encapsulamento.
+        console.log(n1._quantidade);
         console.log(volume);
-        console.log(n1);
+        // console.log(n1);
     </script>
 </body>
 </html>
