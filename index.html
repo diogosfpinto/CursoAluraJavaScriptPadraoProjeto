@@ -62,12 +62,12 @@
     <script>
 
         // Instanciando objetos da classe Negociação
-        var n1 = new Negociacao(new Date(), 10, 700);
+        let n1 = new Negociacao(new Date(), 10, 700);
 
         //Identifica se o objeto está pode sofrer alteração em suas propriedades.
         console.log(Object.isFrozen(n1));
 
-        var volume = n1.volume;
+        let volume = n1.volume;
         
 
         // console.log(n1._quantidade);
