@@ -9,6 +9,10 @@ class Negociacao {
         this._data = new Date();
         this._quantidade = quantidade;
         this._valor = valor;
+       
+        // Congela o valor das propriedades do objeto Negociação
+        Object.freeze(this);
+
     }
 
     get volume() {
