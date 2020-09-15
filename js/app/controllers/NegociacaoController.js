@@ -13,17 +13,14 @@ class NegociacaoController {
 
         console.log(typeof(this._inputData.value));
         
-        //Programação funcional
-        let data = new Date(...this._inputData.value
-                .split("-")
-                .map((item, indice) => item - indice % 2)
-            );
+        let data = new Date(this._inputData.value.split("-"));
+
+        console.log(data);
 
         let negociacao = new Negociacao(
             data,
             this._inputQuantidade.value,
-            this._inputValor.value
-        );
+            this._inputValor.value);
         
         console.log(negociacao);
     };
