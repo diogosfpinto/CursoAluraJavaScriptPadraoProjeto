@@ -1,6 +1,6 @@
 class MensagemView {
 
-    construtor(elemento) {
+    constructor(elemento) {
         this._elemento = elemento;
     }
 
@@ -12,10 +12,7 @@ class MensagemView {
     }
 
     update(model){
-
-        console.log(this._template(model));
-        
         this._elemento.innerHTML = this._template(model);
-        console.log(this._elemento);
+        model ? setTimeout(() => this._elemento.innerHTML = `<p></p>`,3000):null;
     }
 }
